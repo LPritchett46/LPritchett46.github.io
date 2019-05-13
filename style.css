@@ -1,1 +1,9 @@
-
+h1.title {
+  text-align: center;
+}
+h3.subtitle {
+  text-align: center;
+}
+header {
+  background-color: cyan;
+}
