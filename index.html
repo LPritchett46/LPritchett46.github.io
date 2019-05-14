@@ -5,19 +5,20 @@
     <link rel="stylesheet", type="text/css", href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
       $(document).ready(
-        $(".jquery").on(click, (event) => {
+        $(".jquery").on("click", event => {
           $(event.currentTarget).children().toggle()
         })
     </script>
     <script>
       function toggle(item) {
-        if (item.style.display === "none") {
-          item.style.display = "block";
+        if (item.firstChild.style.display === "none") {
+          item.childNodes.style.display = "block";
         } else {
-          item.style.display = "none";
+          item.childNodes.style.display = "none";
         }
       }
     </script>
+    <title>Space Exploration</title>
   </head>
   <body>
     <header>
