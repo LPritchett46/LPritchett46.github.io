@@ -15,8 +15,47 @@
           item.childNodes.style.display = "block";
         } else {
           item.childNodes.style.display = "none";
+        };
+      };
+      const quizContainer = document.getElementById('quiz');
+      const resultsContainer = document.getElementById('results');
+      const submitButton = document.getElementById('submit');
+            const myQuestions = [
+        {
+          question: "filler",
+          answers: {
+            a: "filler",
+            b: "filler",
+            c: "filler"
+          },
+          correctAnswer: "b"
+        },
+        {
+          question: "filler",
+          answers: {
+            a: "filler",
+            b: "filler",
+            c: "filler"
+          },
+          correctAnswer: "c"
+        },
+        {
+          question: "filler",
+          answers: {
+            a: "filler",
+            b: "filler",
+            c: "filler"
+          },
+          correctAnswer: "a"
         }
-      }
+      ];
+      function buildQuiz(){
+      function showResults(){}
+
+        buildQuiz();
+
+        submitButton.addEventListener('click', showResults);
+
     </script>
     <title>Space Exploration</title>
   </head>
@@ -42,6 +81,10 @@
         <li>New Horizons flyby of Ultima Thule</li>
         <li>Virgin Galactic reaches edge of space</li>
      </ul>
+    <h2 id="quiz1 jquery">Quiz!/<h2>
+      <div id="quiz"></quiz>
+      <button id="submit">Submit Quiz</button>
+      <div id="results"></div>
     <h4>Cited Sources</h4>
       <p><a src="https://aerospace.org/story/brief-history-space-exploration">https://aerospace.org/story/brief-history-space-exploration</a></p>
   </body>    
