@@ -6,18 +6,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
       $(document).ready(function() {
         $(".jquery").click( event => {
-          $(event.currentTarget).children().toggle()
-        })
+          $(event.currentTarget).children().toggle();
+          $(event.currentTarget).children().children().toggle();
+        });
       }
     </script>
     <script>
       function hideOrShow(item){
-        if (item.firstChild.style.display === "none"){
+        if (item.firstChild.style.display === "none") {
           item.firstChild.style.display = "block";
-        }else{
+        } else {
           item.firstChild.style.display = "none";
-        };
-      };
+        }
+      }
     </script>
     <title>Space Exploration</title>
   </head>
