@@ -3,22 +3,53 @@
 <!--Hey! What are you doing here? No peeking!-->
   <head>
     <link rel="stylesheet", type="text/css", href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
       $(document).ready(function() {
-        $(".jquery").click( event => {
-          $(event.currentTarget).children().toggle();
-          $(event.currentTarget).children().children().toggle();
+        $("#challenges").click( () => {
+          $("#jquery1").toggle()
+        });
+        $("#current_events").click( () => {
+          $("#jquery2").toggle()
+          $("#jquery3").toggle()
+          $("#jquery4").toggle()
+          $("#jquery5").toggle()
         });
       }
     </script>
     <script>
       function hideOrShowOverview(){
-        let x = document.getElementsByClassName("overviewHide")
+        let x=document.getElementById("overviewHide")
         if (x.style.display === "none") {
-          x.style.display = "block"
+          x.style.display = "block";
         } else {
-          x.style.display = "none"
+          x.style.display = "none";
       }
+      }
+      function hideOrShowHistory(){
+        let x = document.getElementById("historyHide1")
+        let y = document.getElementById("historyHide2")
+        let z = document.getElementById("historyHide3")
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.display = "block";
+          z.style.display = "block";
+        } else {
+          x.style.display = "none";
+          z.style.display = "none";
+          y.style.display = "none";
+        }
+      }
+      function hideOrShowMethods(){
+        let x = document.getElementById("methodsHide")
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+
     </script>
     <title>Space Exploration</title>
   </head>
@@ -28,23 +59,24 @@
       <h3 class="subtitle">By Luke Pritchett</h3>
     </header>
     <h2 id="overview" onclick="hideOrShowOverview()">Overview</h2>
-      <p class="overviewHide">Since the beginning of humanity, we have looked up into the night sky and asked,"What is above us?" Now, we are getting closer to the answer. Space Exploration is one of the most fascinating studies of science. People have thought of many ways to leave our planet, from dropping bombs behind a ship to propelling yourself with charged atoms. However, space exploration is very challenging, with many obstacles standing between us and the great unknown. This website will show you the history, methods, and challenges of space travel, as well as current out-of-this-world events. Enjoy!</p>
+      <p id="overviewHide">Since the beginning of humanity, we have looked up into the night sky and asked,"What is above us?" Now, we are getting closer to the answer. Space Exploration is one of the most fascinating studies of science. People have thought of many ways to leave our planet, from dropping bombs behind a ship to propelling yourself with charged atoms. However, space exploration is very challenging, with many obstacles standing between us and the great unknown. This website will show you the history, methods, and challenges of space travel, as well as current out-of-this-world events. Enjoy!</p>
     <h2 id="history" onclick="hideOrShowHistory()">History</h2>
-      <p class="historyHide">The history of space exploration begins in the cold war, when the U.S. and the Soviet Union were in a state of political hostility towards one another. During the cold war, they had a "space race," in which each one attempted to be the first to put a man in space. On October 4th, 1957, the Soviets launched Sputnik 1, the first man-made satellite. 4 years later, on April 12th, 1961, Soviet cosmonaut Yuri Gagarin was launched into space, winning the space race for the Soviet Union. That same year, Alan Shepard became the first American in space. In 1961, President John F. Kennedy promised to put a man on the moon within a decade. The promise was upheld on July 20th, 1969, when Neil Armstrong took his "one small step for man, one giant leap for mankind."</p>
-      <p class="historyHide">In April of 1991, the launch of Space Shuttle Columbia began the Space Shuttle Program, where the reusable shuttles were used for many successful missions. However, on January 28th, 1986, the Space Shuttle Challenger exploded during launch, killing all 7 of its passengers. The only other shuttle disaster occurred on February 1st, 2003, when Space Shuttle Columbia broke apart during re-entry. No shuttles were launched for two years after each disaster. On March 9th, 2011, Space Shuttle Discovery was retired. Endeavor was retired on June 1st, and on July 21st, Atlantis was retired, marking the end of the program.</p>
-      <p class="historyHide">The International Space Station, a station built by many different countries working together, has been holding astronauts and experiments since 2000. Many spacecraft service this station, from Russia, America, and Japan.
+      <p id="historyHide1">The history of space exploration begins in the cold war, when the U.S. and the Soviet Union were in a state of political hostility towards one another. During the cold war, they had a "space race," in which each one attempted to be the first to put a man in space. On October 4th, 1957, the Soviets launched Sputnik 1, the first man-made satellite. 4 years later, on April 12th, 1961, Soviet cosmonaut Yuri Gagarin was launched into space, winning the space race for the Soviet Union. That same year, Alan Shepard became the first American in space. In 1961, President John F. Kennedy promised to put a man on the moon within a decade. The promise was upheld on July 20th, 1969, when Neil Armstrong took his "one small step for man, one giant leap for mankind."</p>
+      <p id="historyHide2">In April of 1991, the launch of Space Shuttle Columbia began the Space Shuttle Program, where the reusable shuttles were used for many successful missions. However, on January 28th, 1986, the Space Shuttle Challenger exploded during launch, killing all 7 of its passengers. The only other shuttle disaster occurred on February 1st, 2003, when Space Shuttle Columbia broke apart during re-entry. No shuttles were launched for two years after each disaster. On March 9th, 2011, Space Shuttle Discovery was retired. Endeavor was retired on June 1st, and on July 21st, Atlantis was retired, marking the end of the program.</p>
+      <p id="historyHide3">The International Space Station, a station built by many different countries working together, has been holding astronauts and experiments since 2000. Many spacecraft service this station, from Russia, America, and Japan.
     <h2 id="methods" onclick="hideOrShowMethods()">Methods</h2>
-      <p class="methodsHide">There are many ways, both real and hypothesized, that we could leave our planet. The first of these is a simple rocket engine, mixing oxygen with fuel to create thrust. However, this method requires large amounts of fuel, and is highly inefficient. A better solution might be an ion drive, in which positively or negatively charged atoms are fired out from behind the ship. In fact, an ion drive was made by NASA, and it is still operating. There are much more methods of space travel, but the final one I will be discussing today is bomb propulsion. This method works exactly how it sounds: by dropping nuclear bombs behind the ship and using the explosion to propel it. The U.S. Government actually funded a project based on this design, called Project Orion. However, once nuclear tests became banned by an international treaty, the project was shut down.
-    <h2 id="challenges" class="jquery">Challenges</h2>
-      <p class="jquery1">However, space exploration is very challenging, with many things standing between us and the great unknown. The first of these challenges is leaving the Earth's gravity. It takes incredible amounts of energy to leave the Earth's gravitational pull. These energy demands pose a serious threat to space exploration. Even more challenging are the effects on humans. These include radiation, gravity adjustments, and sheer loneliness. Space is very lonely, and a single astronaut can feel alone at times. The final challenge is one that could keep us on this planet for decades: space junk. If we do not do anything to stop the constant accumulation of space junk, we could be surrounded of an inpenetrable, deadly bubble made of tiny pieces of metal and paint. For more information about space junk, click here.</p>
-    <h2 id="current_events" class="jquery">Current Events</h2>
-      <p class="jquery1">Some current events in space exploration include:</p>
+      <p id ="methodsHide">There are many ways, both real and hypothesized, that we could leave our planet. The first of these is a simple rocket engine, mixing oxygen with fuel to create thrust. However, this method requires large amounts of fuel, and is highly inefficient. A better solution might be an ion drive, in which positively or negatively charged atoms are fired out from behind the ship. In fact, an ion drive was made by NASA, and it is still operating. There are much more methods of space travel, but the final one I will be discussing today is bomb propulsion. This method works exactly how it sounds: by dropping nuclear bombs behind the ship and using the explosion to propel it. The U.S. Government actually funded a project based on this design, called Project Orion. However, once nuclear tests became banned by an international treaty, the project was shut down.
+    <h2 id="challenges">Challenges</h2>
+      <p id="jquery1">However, space exploration is very challenging, with many things standing between us and the great unknown. The first of these challenges is leaving the Earth's gravity. It takes incredible amounts of energy to leave the Earth's gravitational pull. These energy demands pose a serious threat to space exploration. Even more challenging are the effects on humans. These include radiation, gravity adjustments, and sheer loneliness. Space is very lonely, and a single astronaut can feel alone at times. The final challenge is one that could keep us on this planet for decades: space junk. If we do not do anything to stop the constant accumulation of space junk, we could be surrounded of an inpenetrable, deadly bubble made of tiny pieces of metal and paint. For more information about space junk, click here.</p>
+    <h2 id="current_events">Current Events</h2>
+      <p id="jquery2">Some current events in space exploration include:</p>
       <ul>
-        <li class="jquery1">InSight landing on Mars</li>
-        <li class="jquery1">New Horizons flyby of Ultima Thule</li>
-        <li class="jquery1">Virgin Galactic reaches edge of space</li>
+        <li id="jquery3">InSight landing on Mars</li>
+        <li id="jquery4">New Horizons flyby of Ultima Thule</li>
+        <li id="jquery5">Virgin Galactic reaches edge of space</li>
      </ul>
     <h4>Cited Sources</h4>
-      <p><a src="https://aerospace.org/story/brief-history-space-exploration">https://aerospace.org/story/brief-history-space-exploration</a></p>
-  </body>    
+      <p><a src="https://linkprotect.cudasvc.com/url?a=https%3a%2f%2faerospace.org%2fstory%2fbrief-history-space-exploration&c=E,1,pqvHZUfbZ83ukmgToY2qltss5n2wtUAr4GplXsCHBy7Azg5SQjbmcLc4f1xiaqt4GPW_VialUcNPWP2PfEOKGKH0sUMOWkNfHREZ5YLOIo9BoFjkQAh9-f4,&typo=1">https://linkprotect.cudasvc.com/url?a=https%3a%2f%2faerospace.org%2fstory%2fbrief-history-space-exploration&c=E,1,FJ9e5iMjBBJU3seSMCP0NaXIIvZd3MRc32PrmVUVujZaXBQ2MwqVDqk9tK1tTWigcukyjLBeqXEQmxGw400e_a-jtnPcw4gEa7JtYwrqX6kihjdAV1uoaR4,&typo=1</a></p>
+  </body>   
 </html>
+
